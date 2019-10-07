@@ -1,0 +1,42 @@
+Questão 1: Responda cada um dos itens abaixo em um arquivo chamado questao1.txt. 
+Ao terminar de responder a questão, crie um commit com a seguinte mensagem: "Questão 1". Valor 20 pontos - 5 pontos cada resposta.
+
+a) Diferencie interfaces públicas de interfaces publicadas 
+e justifique por que interfaces publicadas não devem ser refatoradas.
+
+Resposta: As interfaces públicas não necessariamente estão em produção, 
+e são públicas porque não estão disponíveis apenas para objetos internos, ela só é utilizada dentro do próprio projeto
+e uma interface publicada está em produção, toda interface publicada é uma 
+interface pública mas nem toda interface pública é publicada. Uma interface 
+publicada pode estar sendo utilizada por diversas pessoas ou diversos projetos como por exemplo uma API, 
+e com isso a mudança da refatoração pode quebrar o sistema para alguns usuários 
+e com isso não deve ser refatorado. Para ser refatorado tem que manter a interface antiga 
+e a atual até que os usuários migrem para a nova.
+
+b) Qual a diferença entre os maus cheiros "Cirurgia com rifle" e "Mudanças divergentes". 
+Responda informando claramente os princípios de projetos que estão sendo violados em cada um dos maus-cheiros.
+
+Resposta: A Cirurgia com rifle é o oposto da mudança com rifle, 
+uma mudança que afeta várias classes,
+ao realizar uma mudança várias classes devem sofrer modificações.
+Em Mudanças divergentes, uma classe que sofre várias mudanças.
+Na Cirurgia com rifle uma mudança afeta várias classes, com isso o código é muito acoplado e pouco coeso, a alteração de um código
+afeta diversas outras partes do código, os códigos não estão independentes, levando a um alto acoplamento entre partes do código,
+ com isso é possível aplicar mover método ou mover campo, ou incorporar classe.
+Em Mudanças divergentes, se uma classe sofre várias mudanças, devido tamanho da classe, falta de coesão por uma classe 
+estar fazendo muito mais do que deveria e com isso pode ser feita uma extração de classe para acomodar os elementos 
+de cada variação em um só lugar.
+
+c) Refatoração sempre leva a projetos mais eficientes em termo de desempenho. 
+A afirmativa é verdadeira ou falsa? Justifique.
+
+Resposta: Falso. Nem sempre os projetos se tornam mais eficientes em termo de desempenho,
+não temos garantia de que o projeto ganhará em desempenho com a técnica de refatoração.
+O código fica mais legível e organizado, promovendo maior manutenibilidade e retirando maus cheiros de código, 
+facilitando a leitura e manutenção.
+
+d) Como se tem a garantia de que uma refatoração teve sucesso?
+
+Resposta: Uma garantia de que uma refatoração obteve sucesso é a não alteração no comportamento do código,
+caso hajam testes, os mesmos testes devem estar passando sem que haja alteração. As funcionalidades não são alteradas,
+tem uma melhora na manutenibilidade do código, maior organização e legibilidade, mas não altera comportamento e funcionalidade.
